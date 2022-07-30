@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Heder from './component/Heder';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
+  const moto = [
+    {
+      id: Math.random(),
+      brand: "DUCATI",
+      praice: "4000",
+    },
+    {
+      id: Math.random(),
+      brand: "GSXR",
+      praice: "3500",
+    },
+    {
+      id: Math.random(),
+      brand: "BMW",
+      praice: "4000",
+    },
+    {
+      id: Math.random(),
+      brand: "Z1000",
+      praice: "2500",
+    },
+  ];
+  const str = "hello props"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    < moto mikanik = {moto} chaine = {str}/>
+
+    <Heder />
     </div>
   );
 }
